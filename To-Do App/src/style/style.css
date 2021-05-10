@@ -1,0 +1,29 @@
+body {
+    background-color: grey;
+    padding: 10%;
+}
+
+ul {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 10px;
+    list-style: none;
+    -webkit-box-shadow: 0px 12px 8px -7px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 12px 8px -7px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 12px 8px -7px rgba(34, 60, 80, 0.2);
+}
+
+li > div {
+    display: flex;
+    font-family: KoHo, Verdana, sans-serif;
+    font-size: 1.3em;
+    margin: 10px;
+    padding-bottom: 15px;
+    border-bottom: grey solid 1px;
+    justify-content: center;
+    align-items: center;
+}
+li > div > span {
+    margin: auto;
+    text-align: center;
+}

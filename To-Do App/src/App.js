@@ -1,6 +1,7 @@
 import React from "react";
 import ToDoItem from "./components/ToDoItem";
 import todoData from "./todoData";
+import "./style/style.css";
 
 class App extends React.Component {
     constructor() {
@@ -22,7 +23,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <ul style={{ listStyle: "none" }}>
+                <ul>
                     {this.state.todos.map((t) => (
                         <li key={t.id}>
                             <ToDoItem

@@ -1,18 +1,17 @@
 import React from "react";
 
 const ToDoItem = ({ done, text, onChange }) => {
-    const styles = { marginRight: 10 };
+    const completedStyle = {
+        color: "grey",
+        fontStyle: "italic",
+        textDecoration: "line-through",
+    };
 
     return (
-        <span>
-            <input
-                type="checkbox"
-                style={styles}
-                checked={done}
-                onChange={onChange}
-            />
-            {text}
-        </span>
+        <div>
+            <input type="checkbox" checked={done} onChange={onChange} />
+            <span style={done ? completedStyle : null}>{text}</span>
+        </div>
     );
 };
 
