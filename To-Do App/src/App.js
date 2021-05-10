@@ -13,10 +13,11 @@ class App extends React.Component {
 
     handleCheck(id) {
         this.setState((prevState) => {
-            let newState = { ...prevState, todos: prevState.todos.slice() };
-            let changedTodo = newState.todos.find((t) => t.id === id);
-            changedTodo.completed = !changedTodo.completed;
-            return newState;
+            let newTodos = prevState.todos.map((t) => {
+                if (t.id === id) return { ...t, completed: !t.completed };
+                return t;
+            });
+            return { todos: newTodos };
         });
     }
 
