@@ -23,6 +23,11 @@ li > div {
     justify-content: center;
     align-items: center;
 }
+
+li:last-child > div {
+    border-bottom: none;
+}
+
 li > div > span {
     margin: auto;
     text-align: center;
